@@ -2,71 +2,133 @@
 <html>
 
 <head>
-  <link rel="icon" href="assets/logo/Add Song_1.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/animate.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Happy 25's</title>
+    <link rel="icon" href="assets/logo/Add Song_1.png" type="image/x-icon">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Happy 25's</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
-  <!-- Bagian Atas -->
-  <div class="tirai">
+<!-- Bagian Atas -->
+<div class="tirai">
     <img class="inKiri" src="assets/gambar/tiraiKiri.png" alt="">
     <img class="inKanan" src="assets/gambar/tiraiKanan.png" alt="">
-  </div>
-  <!-- Bagian Tengah -->
-  <div class="container">
+</div>
+<!-- Bagian Tengah -->
+<div class="container">
     <div class="text">
-      <div class="greet">
-        <p class="hey">hey</p>
-        <p class="name">Daifugui,</p>
-      </div>
-      <div class="wish">
-        <p class="birthday">Happy Birthday</p>
-        <p class="desc">心想事成</p>
-        <p class="desc" style="display: none;">May all your wishes come true</p>
-      </div>
-      <div class="bf">
-        <p class="from">from Daifugui</p>
-      </div>
+        <div class="greet">
+            <p class="hey">hey</p>
+            <p class="name">Fugui,</p>
+        </div>
+        <div class="wish">
+            <p class="birthday">Happy Birthday</p>
+            <p class="desc">心想事成</p>
+            <p class="desc" style="display: none;">May all your wishes come true</p>
+            <!-- Bagian Modal -->
+            <p>
+                <br/>
+                <button type="button" class="rounded-button" id="openModal" data-bs-toggle="modal"
+                        data-bs-target="#myModal">Klik Me!
+                </button>
+            </p>
+        </div>
+        <div class="bf">
+            <p class="from">from Fugui</p>
+        </div>
     </div>
-  </div>
-  <!-- Bagian Bawah -->
-  <div class="bottom">
+</div>
+<!-- Bagian Bawah -->
+<div class="bottom">
     <img class="inKiri hold" src="assets/gambar/terompetKiri.png" alt="">
     <img id="inBawah" src="assets/gambar/kue.png" alt="">
     <img class="inKanan hold" src="assets/gambar/terompetKanan.png" alt="">
-  </div>
-  <!-- Bagian Modal -->
-  <button type="button" id="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">Klik Me!</button>
-  <!-- Modal -->
-  <div class="modal fade" tabindex="-1" aria-labelledby="fade" aria-hidden="true" id="myModal">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Dear</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>生日快乐！🎉 你在我的生活中就像是每天的快乐和动力。你的善良、美丽和你们一直支持我的方式照亮了我的世界，我甚至无法用语言表达。
-            希望今年能给你带来巨大的成功、健康和幸福，因为你一直都很了不起你就是这样的人。说到今天，我也想说，我知道我并不总是最好的，我对不起，我让你难过了很多次。我真希望我能一直保持你脸上的笑容，而我后悔那些我功亏一篑的时刻。</p>
-          <p  style="display: none;">Happy birthday to my love! 🎉 You are like a daily joy and motivation in my life. Your kindness, beauty and the way you always support me lights up my world in a way I can’t even put into words.
-            I hope this year brings you great success, health, and happiness because you are amazing the way you always are. Speaking of today, I also want to say that I know I am not always the best and I am sorry that I have made you sad so many times. I wish I could always keep that smile on your face, and I regret those moments when I fell short.</p>
-        </div>
+</div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Thanks Fugui</button>
-          <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
+<!-- Modal -->
+<!--<div class="modal fade" tabindex="-1" aria-labelledby="fade" aria-hidden="true" id="myModal">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">-->
+<!-- 全屏灰色背景 -->
+<div class="modal-bg" id="modalBg"></div>
+<!-- 弹出框内容 -->
+<div class="modal-content" id="myModals">
+    <div class="modal-header">
+        <h3 class="modal-title">Dear Fugui</h3>
+        <br/>
+        <hr/>
+        <br/>
+        <p>&nbsp;&nbsp;生日快乐！🎉 你在我的生活中就像是每天的快乐和动力。你的善良、美丽和你们一直支持我的方式照亮了我的世界，我甚至无法用语言表达。
+            希望今年能给你带来巨大的成功、健康和幸福，因为你一直都很了不起你就是这样的人。说到今天，我也想说，我知道我并不总是最好的，
+            我对不起，我让你难过了很多次。我真希望我能一直保持你脸上的笑容，而我后悔那些我功亏一篑的时刻。</p>
+        <p style="display: none;">Happy birthday to my love! 🎉 You are like a daily joy and
+            motivation in my life. Your kindness, beauty and the way you always support me lights up
+            my world in a way I can’t even put into words.
+            I hope this year brings you great success, health, and happiness because you are amazing
+            the way you always are. Speaking of today, I also want to say that I know I am not
+            always the best and I am sorry that I have made you sad so many times. I wish I could
+            always keep that smile on your face, and I regret those moments when I fell short.</p>
     </div>
-  </div>
-  <script src="assets/js/play.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+    <br/>
+    <hr/>
+    <br/>
+    <div style="text-align: right;">
+        <button id="closeModal" class="rounded-button">Thanks Fugui</button>
+        <button id="closeModal2" class="rounded-button-white">Close</button>
+    </div>
+</div>
+<script>
+        // 获取按钮和模态框元素
+        var openModalBtn = document.getElementById("openModal");
+        var closeModalBtn = document.getElementById("closeModal");
+        var closeModalBtn2 = document.getElementById("closeModal2");
+        var modalBg = document.getElementById("modalBg");
+        var modal = document.getElementById("myModals");
+
+        // 当点击按钮时显示模态框和背景
+        openModalBtn.addEventListener("click", function () {
+            modal.style.display = "block";
+            modalBg.style.display = "block";
+        });
+
+        // 当点击关闭按钮或背景时关闭模态框
+        closeModalBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+            modalBg.style.display = "none";
+        });
+        closeModalBtn2.addEventListener("click", function () {
+            modal.style.display = "none";
+            modalBg.style.display = "none";
+        });
+
+        modalBg.addEventListener("click", function () {
+            modal.style.display = "none";
+            modalBg.style.display = "none";
+        });
+
+
+</script>
+
+<!-- 弹出框内容 -->
+<div class="modal-content" id="myModal">
+    <div class="modal-header">
+        <h5 class="modal-title">Dear</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Thanks Fugui</button>
+        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+    </div>
+</div>
+<script src="assets/js/play.js"></script>
 </body>
 
 </html>

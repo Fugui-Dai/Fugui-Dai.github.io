@@ -4,6 +4,6 @@ let oneTime = true;
 if (oneTime) {
     setTimeout(() => {
         window.location.href = 'home.html';
-    }, 4000);
+    }, 3000);
     oneTime = false;
 }
